@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "TodoBackend": {
+    "App": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

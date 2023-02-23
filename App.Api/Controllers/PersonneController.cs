@@ -22,7 +22,7 @@ public class PersonneController : ControllerBase
     public async Task<ActionResult<IEnumerable<PersonneApi>>> GetAllPersonnesAsync()
     {
         var personnes = await _service.GetAllPersonnesAsync();
-        return Ok(personnes.Select(ConvertToPersonneApi));
+        return Ok(personnes.Select(ConvertToPersonneApi).OrderByDescending(p => p.Age));
     }
 
     [HttpGet("{id}")]
